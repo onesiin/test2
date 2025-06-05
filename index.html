@@ -1,27 +1,204 @@
 <!DOCTYPE html>
 <html lang="ko">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="author" content="NAEILInc.">
-  <title>Heropy~</title>
-  <link rel="stylesheet" href="./main.css">
-  <script src="./main.js"></script>
-  <script>
-    console.log('Hello world!')
-  </script>
-  <style>
-    div {
-      color: red;
-      text-decoration: underline;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body, html {
+            font-family: 'Inter', 'Pretendard', 'Noto Sans KR', Arial, sans-serif;
+        }
+    </style>
 </head>
+<body class="bg-gray-50">
+    <!-- Hero Section with Fullscreen Background Image -->
+    <section id="home" class="relative h-screen w-full flex items-center justify-center">
+        <!-- Background Image -->
+        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1500&q=80" alt="hero" class="absolute inset-0 w-full h-full object-cover object-center z-0" />
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black/30 z-10"></div>
+        <!-- Navigation Bar -->
+        <nav class="absolute top-0 left-0 w-full z-20">
+            <div class="flex items-center justify-between px-10 py-6">
+                <!-- Logo -->
+                <div class="text-white text-xl font-bold tracking-widest" style="letter-spacing:0.2em;">ARCH/CEFACTORY</div>
+                <!-- Menu -->
+                <div class="hidden md:flex space-x-10 text-white text-sm font-light tracking-widest">
+                    <a href="#projects" class="hover:text-gray-300 transition">PRODUCTS</a>
+                    <a href="#rnd" class="hover:text-gray-300 transition">R&amp;D</a>
+                    <a href="#careers" class="hover:text-gray-300 transition">CAREERS</a>
+                    <a href="#contact" class="hover:text-gray-300 transition">CONTACT</a>
+                </div>
+                <!-- Social Icons -->
+                <div class="flex space-x-5 text-white text-lg">
+                    <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-youtube"></i></a>
+                    <a href="#" class="hover:text-gray-300 transition"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+        </nav>
+    </section>
 
-<body>
-  <a href="https://naver.com">NAVER</a>
-  <a href="/about/about.html">About</a>
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">주요 프로젝트</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project Card 1 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 1" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <h3 class="text-2xl font-bold mb-2">주거 공간</h3>
+                            <p class="mb-4">현대적인 주거 공간 설계</p>
+                            <a href="#" class="inline-block bg-white text-gray-900 px-4 py-2 rounded-full">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 2" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <h3 class="text-2xl font-bold mb-2">상업 공간</h3>
+                            <p class="mb-4">혁신적인 상업 공간 설계</p>
+                            <a href="#" class="inline-block bg-white text-gray-900 px-4 py-2 rounded-full">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Project Card 3 -->
+                <div class="group relative overflow-hidden rounded-lg shadow-lg">
+                    <img src="https://via.placeholder.com/600x400" alt="Project 3" class="w-full h-64 object-cover transition duration-300 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition duration-300 flex items-center justify-center">
+                        <div class="text-white text-center p-6">
+                            <h3 class="text-2xl font-bold mb-2">문화 시설</h3>
+                            <p class="mb-4">문화와 예술을 담은 공간</p>
+                            <a href="#" class="inline-block bg-white text-gray-900 px-4 py-2 rounded-full">자세히 보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <img src="https://via.placeholder.com/600x800" alt="Profile" class="rounded-lg shadow-xl">
+                </div>
+                <div class="md:w-1/2 md:pl-12">
+                    <h2 class="text-4xl font-bold mb-8">소개</h2>
+                    <p class="text-gray-600 mb-6">
+                        10년 이상의 건축 경험을 바탕으로, 공간의 가치를 최대화하는 설계를 추구합니다.
+                        지속가능한 건축과 현대적인 디자인을 결합하여 독특한 공간을 창조합니다.
+                    </p>
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-2">전문 분야</h3>
+                            <ul class="text-gray-600">
+                                <li>주거 건축</li>
+                                <li>상업 건축</li>
+                                <li>인테리어 디자인</li>
+                                <li>도시 계획</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <h3 class="text-xl font-bold mb-2">자격</h3>
+                            <ul class="text-gray-600">
+                                <li>건축사 자격증</li>
+                                <li>LEED 인증 전문가</li>
+                                <li>대학원 건축학 석사</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">연락처</h2>
+            <div class="max-w-4xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">문의하기</h3>
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-gray-700 mb-2">이름</label>
+                                <input type="text" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-gray-500" placeholder="Your Name" title="이름">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">이메일</label>
+                                <input type="email" class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-gray-500" placeholder="Your Email" title="이메일">
+                            </div>
+                            <div>
+                                <label class="block text-gray-700 mb-2">메시지</label>
+                                <textarea class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:border-gray-500" rows="4" placeholder="Your Message" title="메시지"></textarea>
+                            </div>
+                            <button class="bg-gray-900 text-white px-8 py-3 rounded-full hover:bg-gray-800 transition duration-300">
+                                보내기
+                            </button>
+                        </form>
+                    </div>
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">연락처 정보</h3>
+                        <div class="space-y-4">
+                            <p class="flex items-center">
+                                <i class="fas fa-map-marker-alt w-6 text-gray-600"></i>
+                                <span class="ml-2">서울특별시 강남구</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-phone w-6 text-gray-600"></i>
+                                <span class="ml-2">02-1234-5678</span>
+                            </p>
+                            <p class="flex items-center">
+                                <i class="fas fa-envelope w-6 text-gray-600"></i>
+                                <span class="ml-2">contact@architecture.com</span>
+                            </p>
+                        </div>
+                        <div class="mt-8">
+                            <h4 class="text-xl font-bold mb-4">소셜 미디어</h4>
+                            <div class="flex space-x-4">
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <i class="fab fa-instagram text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <i class="fab fa-linkedin text-2xl"></i>
+                                </a>
+                                <a href="#" class="text-gray-600 hover:text-gray-900">
+                                    <i class="fab fa-behance text-2xl"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-6 md:mb-0">
+                    <h2 class="text-2xl font-bold">ARCHITECTURE</h2>
+                    <p class="mt-2 text-gray-400">© 2024 All rights reserved.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white">이용약관</a>
+                    <a href="#" class="text-gray-400 hover:text-white">개인정보처리방침</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
-
 </html>
